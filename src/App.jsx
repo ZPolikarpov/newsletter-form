@@ -16,7 +16,7 @@ function App() {
 		if (subscribed) {
 			return <>
 				<div className="card__content">
-					<img src="images/icon-success.svg" />
+					<img src="images/icon-success.svg" alt="An orange circle with a white checkmark"/>
 					<h1 className="card__heading">Thanks for subscribing!</h1>
 					<p>A confirmation email has been sent to <span className="fw-bold">{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
 					<button className="button"
@@ -57,7 +57,7 @@ function App() {
 				</div>
 
 				{/* image source is set in the .card class */}
-				<img className="subscribe-image" />
+				<img className="subscribe-image" src="" alt="A primarily orange, colorful illustration showing graphs over a browser window"/>
 			</>
 		}
 	}
