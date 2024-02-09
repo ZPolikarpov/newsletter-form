@@ -8,13 +8,16 @@
   line-height: $card-line-height;
   box-shadow: $card-shadow;
   border-radius: $card-border-radius;
-  padding-block: $size-6;
-  padding-inline-end: $size-6;
-  
+
+  &[data-type="with-image"] {
+    padding-block: $size-6;
+    padding-inline-end: $size-6;
+  }
+
   &__heading {
     @include heading($card-heading-font-size, $card-heading-color-default);
   }
-  
+
   &__content {
     display: grid;
     gap: $card-flow-spacing;

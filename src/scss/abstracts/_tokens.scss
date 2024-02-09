@@ -61,7 +61,7 @@ $section-padding-block: clamp(5rem, 10vh, 6rem);
 
 $container-min-margin-inline: 0rem;
 $container-max-width: 58rem;
-$container-max-width-narrow: 40rem;
+$container-max-width-narrow: 31.5rem;
 $container-max-width-wide: 75rem;
 
 // buttons
@@ -76,7 +76,11 @@ $button-border-radius: $border-radius-1;
 $button-primary-color: $color-neutral-000;
 $button-primary-background: $color-neutral-800;
 $button-primary-color-hover: $color-neutral-000;
-$button-primary-background-hover: linear-gradient(to right top, $color-primary-700, $color-primary-400);
+$button-primary-background-hover: linear-gradient(
+  to right top,
+  $color-primary-700,
+  $color-primary-400
+);
 
 // cards
 $card-flow-spacing: $size-9;

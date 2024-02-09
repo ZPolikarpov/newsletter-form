@@ -1,4 +1,5 @@
 import illustration from "./assets/images/illustration-sign-up-desktop.svg"
+import checkmark from "./assets/images/icon-success.svg"
 import { useState } from "react"
 
 function App() {
@@ -16,7 +17,13 @@ function App() {
 	function renderContent(subscribed) {
 		if (subscribed) {
 			return <>
-				
+				<div className="card__content">
+					<img src={checkmark} />
+					<h1 className="card__heading">Thanks for subscribing!</h1>
+					<p>A confirmation email has been sent to <span className="fw-bold">{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
+					<button className="button"
+							data-type="primary">Dismiss message</button>
+				</div>
 			</>
 		} else {
 			return <>
@@ -58,8 +65,8 @@ function App() {
 
 	return (
 		<>
-			<main className="container">
-				<div className="card" data-type="with-image">
+			<main className="container" data-type={ subscribed ? "narrow" :  null }>
+				<div className="card" data-type={ subscribed ? null : "with-image"}>
 					{ renderContent(subscribed) }
 				</div>
 			</main>
