@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $size-2;
+
+  li {
+    display: flex;
+    gap: $size-4;
+
+    &::before {
+      content: url(./src/assets/images/icon-list.svg);
+    }
+
+    div {
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
