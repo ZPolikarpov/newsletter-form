@@ -3,14 +3,17 @@
 .card {
   display: flex;
   flex-flow: column-reverse;
+  min-height: 100vh;
+  height: fit-content;
+  justify-content: center;
+  padding-block: 0rem;
+  padding-inline-end: 0rem;
+
   background-color: $card-background-default;
   font-family: $card-font-family;
   color: $card-color-default;
   line-height: $card-line-height;
   box-shadow: $card-shadow;
-  padding-block: 0rem;
-  padding-inline-end: 0rem;
-  min-height: 100vh;
 
   &__heading {
     @include heading($card-heading-font-size, $card-heading-color-default);
@@ -24,7 +27,7 @@
   }
 
   .subscribe-image {
-    content: url(./src/assets/images/illustration-sign-up-mobile.svg);
+    content: url(/images/illustration-sign-up-mobile.svg);
   }
 
   @include mq(48.75rem) {
@@ -35,7 +38,7 @@
       padding-inline-end: $size-6;
 
       .subscribe-image {
-        content: url(./src/assets/images/illustration-sign-up-desktop.svg);
+        content: url(/images/illustration-sign-up-desktop.svg);
       }
     }
 

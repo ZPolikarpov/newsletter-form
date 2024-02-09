@@ -1,5 +1,3 @@
-import illustration from "./assets/images/illustration-sign-up-desktop.svg"
-import checkmark from "./assets/images/icon-success.svg"
 import { useState } from "react"
 
 function App() {
@@ -18,7 +16,7 @@ function App() {
 		if (subscribed) {
 			return <>
 				<div className="card__content">
-					<img src={checkmark} />
+					<img src="images/icon-success.svg" />
 					<h1 className="card__heading">Thanks for subscribing!</h1>
 					<p>A confirmation email has been sent to <span className="fw-bold">{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
 					<button className="button"
