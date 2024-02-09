@@ -2,17 +2,15 @@
 
 .card {
   display: flex;
+  flex-flow: column-reverse;
   background-color: $card-background-default;
   font-family: $card-font-family;
   color: $card-color-default;
   line-height: $card-line-height;
   box-shadow: $card-shadow;
-  border-radius: $card-border-radius;
-
-  &[data-type="with-image"] {
-    padding-block: $size-6;
-    padding-inline-end: $size-6;
-  }
+  padding-block: 0rem;
+  padding-inline-end: 0rem;
+  min-height: 100vh;
 
   &__heading {
     @include heading($card-heading-font-size, $card-heading-color-default);
@@ -21,6 +19,32 @@
   &__content {
     display: grid;
     gap: $card-flow-spacing;
-    padding: $card-padding;
+    padding-block: $size-9;
+    padding-inline: $size-6;
+  }
+
+  .subscribe-image {
+    content: url(./src/assets/images/illustration-sign-up-mobile.svg);
+  }
+
+  @include mq(48.75rem) {
+    flex-flow: row;
+    min-height: 0;
+    &[data-type="with-image"] {
+      padding-block: $size-6;
+      padding-inline-end: $size-6;
+
+      .subscribe-image {
+        content: url(./src/assets/images/illustration-sign-up-desktop.svg);
+      }
+    }
+
+    &__content {
+      padding: $card-padding;
+    }
+  }
+
+  @include mq(58.125rem) {
+    border-radius: $card-border-radius;
   }
 }

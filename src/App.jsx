@@ -58,7 +58,8 @@ function App() {
 
 				</div>
 
-				<img src={illustration}/>
+				{/* image source is set in the .card class */}
+				<img className="subscribe-image" />
 			</>
 		}
 	}
