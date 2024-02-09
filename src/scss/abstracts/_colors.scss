@@ -3,6 +3,7 @@ $-clr-grey: hsl(231, 7%, 60%);
 $-clr-charcoal: hsl(235, 18%, 26%);
 $-clr-darkslate: hsl(234, 29%, 20%);
 $-clr-tomato: hsl(4, 100%, 67%);
+$-clr-tomato-light: hsla(4, 100%, 67%, 15%);
 $-clr-tomato-gradient: hsl(346, 100%, 66%);
 
 
@@ -14,6 +15,7 @@ $light: (
     "800": $-clr-darkslate,
   ),
   "primary": (
+    "100": $-clr-tomato-light,
     "400": $-clr-tomato,
     "700": $-clr-tomato-gradient,
   ),
@@ -25,5 +27,6 @@ $color-neutral-400: var(--neutral-400);
 $color-neutral-700: var(--neutral-700);
 $color-neutral-800: var(--neutral-800);
 
+$color-primary-100: var(--primary-100);
 $color-primary-400: var(--primary-400);
 $color-primary-700: var(--primary-700);

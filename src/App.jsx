@@ -1,6 +1,9 @@
 import illustration from "./assets/images/illustration-sign-up-desktop.svg"
+import { useState } from "react"
 
 function App() {
+	const [email, setEmail] = useState(null)
+
 	return (
 		<>
 			<main className="container">
@@ -19,13 +22,20 @@ function App() {
 							</ul>
 
 						</div>
-						<div className="contact-form">
-							<div className="form-group">
-								<label htmlFor="email">Email address</label>
-								<input className="margin-block-start-2" type="email" name="email" id="email" placeholder="email@company.com" />
-								<button className="button | margin-block-start-6" data-type="primary" type="submit">Subscribe to monthly newsletter</button>
-							</div>
-						</div>
+						<form className="contact-form">
+							<fieldset className="form-group">
+								<div className="input-labels">
+									<label htmlFor="email">Email address</label>
+									<p className="error-text">Valid email required</p>
+								</div>
+								<input className="margin-block-start-2"
+									type="email" name="email" id="email" placeholder="email@company.com"/>
+							</fieldset>
+							<fieldset className="form-group">
+								<button className="button | margin-block-start-6"
+									data-type="primary" type="submit">Subscribe to monthly newsletter</button>
+							</fieldset>
+						</form>
 					</div>
 
 					<img src={illustration}/>
