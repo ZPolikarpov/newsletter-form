@@ -3,6 +3,10 @@
 .contact-form {
   .form-group {
     display: grid;
+
+    &invalid .error-text {
+      display: block;
+    }
   }
 }
 label {
@@ -18,10 +22,6 @@ label {
   font-family: $form-label-font-family;
   font-weight: $form-label-font-weight;
   font-size: $form-label-font-size;
-}
-
-fieldset:invalid .error-text {
-  display: block;
 }
 
 .input-labels {
